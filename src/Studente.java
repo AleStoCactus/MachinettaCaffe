@@ -6,7 +6,7 @@ public class Studente {
 
     public static void main(String[] args) {
         Studente studente1 = new Studente();
-        studente1.eta = 17;
+        studente1.eta = 18;
         studente1.nome = "Mario";
         studente1.cognome = "Rossi";
         studente1.materiaPreferita = "Educazione Fisica";
