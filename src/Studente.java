@@ -17,11 +17,9 @@ public class Studente {
 
     public float EseguiVerifica(String nomeMateria, String prof) {
         float voto = 0.0F;
-        this.materiaPreferita = nomeMateria;
-        this.profPreferito = prof;
-        if (materiaPreferita == "Educazione Fisica" && profPreferito == "Marino") {
+        if (materiaPreferita == nomeMateria && profPreferito == prof) {
             voto = 10.0F;
-        } else if (materiaPreferita != "Educazione Fisica" && profPreferito != "Marino") {
+        } else if (materiaPreferita != nomeMateria && profPreferito != prof) {
             voto = 4.0F;
         } else {
             voto = 8.0F;
@@ -36,8 +34,8 @@ public class Studente {
     public static void main(String[] args) {
         Studente studente1 = new Studente(17, "Mario", "Rossi", "Educazione Fisica", "Imbesi");
         Studente studente2 = new Studente(18, "Rylee", "Calleri", "Informatica", "Marino");
-        studente1.EseguiVerifica(studente1.materiaPreferita, studente1.profPreferito);
-        studente2.EseguiVerifica(studente2.materiaPreferita, studente2.profPreferito);
+        studente1.ultimoVoto = studente1.EseguiVerifica("Informatica", "Marino");
+        studente2.ultimoVoto = studente2.EseguiVerifica("Informatica", "Marino");
 
         System.out.println("\nDati Studente1");
         studente1.StampaInfo();
